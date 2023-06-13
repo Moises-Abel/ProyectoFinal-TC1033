@@ -10,13 +10,13 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    system("clear");
     automovil a(int (0), false);
     gasolina b(21);
     luces luz;
     int entrada = 0;
     while (entrada != 7)
     {
+        system("CLS");
         cout << "- - - - - - - - - -" << endl;
         a.imprimirV();
         a.imprimirE();
@@ -60,7 +60,14 @@ int main(int argc, char const *argv[])
                 double litros;
                 cout << "Litros a depositar: ";
                 cin >> litros;
-                b.setGasolina(litros);
+                if (litros > 0)
+                {
+                    b.setGasolina(litros);
+                }
+                else
+                {
+                    cout << "Ingrese un valor apropiado. "<<endl;
+                }
             }
         }
         else

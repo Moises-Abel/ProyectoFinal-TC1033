@@ -1,4 +1,5 @@
 #include "luces.h"
+#include "automovil.h"
 #include <iostream>
 using namespace std;
 
@@ -32,7 +33,12 @@ int luces::getState()
 
 void luces::imprimir()
 {
-    if (estado == 0)
+    if (estado)
+    {
+        /* code */
+    }
+    
+    else if (estado == 0)
     {
         cout << "Luces: apagadas" << endl;
     }
@@ -48,5 +54,6 @@ void luces::imprimir()
     {
         cout << "Luces: Niebla" << endl;
     }
+
     
 }

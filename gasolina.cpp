@@ -35,5 +35,8 @@ void gasolina::imprimir()
 {
     int porcentajeGasolina;
     porcentajeGasolina = (nivelGasolina*100)/42;
-    cout << "Tanque: " << porcentajeGasolina << "%" << endl;
+    if(porcentajeGasolina > 15)
+    {
+        cout << "Tanque: " << porcentajeGasolina << "%" << endl;
+    }
 }

@@ -4,6 +4,7 @@
 */
 
 #include "automovil.h"
+#include "gasolina.h"
 #include <iostream>
 using namespace std;
 
@@ -33,14 +34,15 @@ void automovil::acelerar()
 
 void automovil::frenar()
 {
-    if (velocidad > 0 )
-    {
-        velocidad = velocidad - 25;
-    }
     if (velocidad -25 < 0)
     {
         velocidad = 0;
     }
+    else if (velocidad > 0 )
+    {
+        velocidad = velocidad - 25;
+    }
+    
 }
 
 void automovil::cambiarEstado()
