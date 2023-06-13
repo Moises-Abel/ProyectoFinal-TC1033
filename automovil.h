@@ -11,8 +11,12 @@ public:
     void acelerar();
     void frenar();
 
-    void getSpeed();
-    void imprimir();
-    bool cambiarEstado();
+    int getSpeed();
+    int getState();
+    
+    void cambiarEstado();
+    void imprimirV();
+    void imprimirE();
+    
 };
 

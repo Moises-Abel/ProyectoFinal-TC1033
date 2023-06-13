@@ -1,12 +1,14 @@
 class gasolina
 {
 private:
-    int nivelGasolina;
+    double nivelGasolina;
 public:
     gasolina();
+    gasolina(double n);
 
-    void setGasolina();
-    void getGasolina();
+    void setGasolina(double n);
+    double getGasolina();
+    void imprimir();
 };
 
 

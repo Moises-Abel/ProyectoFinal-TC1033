@@ -25,9 +25,9 @@ void automovil::acelerar()
     {
         velocidad = velocidad + 15;
     }
-    else
+    if(velocidad + 15 > 230)
     {
-        cout << "Velocidad Maxima, no se puede acelerar mas";
+        velocidad = 230;
     }
 }
 
@@ -37,31 +37,52 @@ void automovil::frenar()
     {
         velocidad = velocidad - 25;
     }
-    else if (velocidad <= 24)
+    if (velocidad -25 < 0)
     {
         velocidad = 0;
     }
-    else
+}
+
+void automovil::cambiarEstado()
+{
+    if (estado == true)
     {
-        cout << "El auto se encuentra detenido";
+        estado = false;
+    }
+    else if (estado == false)
+    {
+        estado = true;
     }
 }
 
-void automovil::getSpeed()
+int automovil::getSpeed()
+{
+    return velocidad;
+}
+
+int automovil::getState()
+{
+    return estado;
+}
+
+void automovil::imprimirV()
 {
     if (velocidad < 160)
     {
-        cout << velocidad << " Km/h";
+        cout << "velocidad: "<< velocidad << " Km/h" << endl;
     }
-    if (velocidad > 160)
+    else if (velocidad > 160)
     {
-        cout << velocidad <<" Km/h <ADVERTENCIA DE VELOCIDAD>";
+        cout <<"velocidad: "<< velocidad <<" Km/h <ADVERTENCIA DE VELOCIDAD>" << endl;
+    }
+    else if (velocidad = 230)
+    {
+        cout <<"velocidad: "<< velocidad <<" Km/h VELOCIDAD MAXIMA" << endl;
     }
 }
 
-void automovil::imprimir()
+void automovil::imprimirE()
 {
-    cout << "velocidad: " << velocidad << " Km/H" << endl;
     if (estado == false)
     {
         cout << "Estado: apagado. " << endl;
@@ -70,7 +91,9 @@ void automovil::imprimir()
     {
         cout << "Estado: prendido. " << endl;
     }
-}
+} 
+
+
     
     
 
