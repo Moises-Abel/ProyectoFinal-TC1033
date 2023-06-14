@@ -1,3 +1,7 @@
+/**
+*Autor: Moisés Abel Díaz Nava
+*clase "gasolina" 
+*/
 class gasolina
 {
 private:
@@ -7,6 +11,7 @@ public:
     gasolina(double n);
 
     void setGasolina(double n);
+    void gasto(double n);
     double getGasolina();
     void imprimir();
 };

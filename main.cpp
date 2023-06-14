@@ -1,5 +1,6 @@
 /*
 *Autor: Moisés Abel Díaz Nava
+*Archivo con la función main
 */
 
 #include <iostream>
@@ -11,12 +12,13 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     automovil a(int (0), false);
-    gasolina b(21);
+    gasolina b(42);
     luces luz;
     int entrada = 0;
     while (entrada != 7)
     {
         system("CLS");
+        b.gasto(a.getSpeed());
         cout << "- - - - - - - - - -" << endl;
         a.imprimirV();
         a.imprimirE();
@@ -70,9 +72,17 @@ int main(int argc, char const *argv[])
                 }
             }
         }
-        else
+        if(a.getState() == false )
         {
-            cout << "ingrese un valor apropiado de entre las opciones" << endl;
+            luz.setState(0);
+            a.setSpeed(0);
         }
-    }   
+        if(b.getGasolina() <= 0)
+        {
+            luz.setState(0);
+            a.setSpeed(0);
+            a.setState(false);
+        }
+    }
+    system("CLS");   
 }

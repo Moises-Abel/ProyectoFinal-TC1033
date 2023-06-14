@@ -1,3 +1,7 @@
+/**
+*Autor: Moisés Abel Díaz Nava
+*clase "automoviles" 
+*/
 class automovil
 {
 
@@ -12,7 +16,9 @@ public:
     void frenar();
 
     int getSpeed();
-    int getState();
+    bool getState();
+    void setSpeed(int n);
+    void setState(bool e);
     
     void cambiarEstado();
     void imprimirV();

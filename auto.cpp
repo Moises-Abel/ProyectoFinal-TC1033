@@ -62,10 +62,21 @@ int automovil::getSpeed()
     return velocidad;
 }
 
-int automovil::getState()
+bool automovil::getState()
 {
     return estado;
 }
+
+void automovil::setSpeed(int n)
+{
+    velocidad = n;
+}
+
+void automovil::setState(bool e)
+{
+    estado = e;
+}
+
 
 void automovil::imprimirV()
 {

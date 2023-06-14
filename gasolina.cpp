@@ -13,9 +13,15 @@ gasolina::gasolina(double n)
     nivelGasolina = n;
 }
 
+void gasolina::gasto(double n)
+{
+    double consumo = n*0.005;
+    nivelGasolina = nivelGasolina - consumo;
+}
+
 void gasolina::setGasolina(double n)
 {
-    if (n < 42 && nivelGasolina != 42)
+    if (n <= 42 && nivelGasolina != 42)
     {
         nivelGasolina = nivelGasolina + n;
         if (nivelGasolina > 42)
@@ -26,9 +32,12 @@ void gasolina::setGasolina(double n)
     }
 }
 
+
 double gasolina::getGasolina()
 {
-    return nivelGasolina;
+    int porcentajeGasolina;
+    porcentajeGasolina = (nivelGasolina*100)/42;
+    return porcentajeGasolina;
 }
 
 void gasolina::imprimir()
@@ -39,4 +48,13 @@ void gasolina::imprimir()
     {
         cout << "Tanque: " << porcentajeGasolina << "%" << endl;
     }
+    if(porcentajeGasolina < 15)
+    {
+        cout << "Tanque: " << porcentajeGasolina << "%" << "Combustible bajo" << endl;
+    }
+    if (porcentajeGasolina <= 0)
+    {
+        cout << "Tanque: Tanque vacio" << endl;        
+    }
+    
 }

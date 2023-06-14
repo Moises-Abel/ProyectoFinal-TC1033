@@ -1,3 +1,7 @@
+/**
+*Autor: Moisés Abel Díaz Nava
+*clase "luces" 
+*/
 class luces
 {
 private:
@@ -8,6 +12,7 @@ public:
 
     int changeState1();
     int changeState2();
+    void setState(int n);
     int getState();
     void imprimir();
 };

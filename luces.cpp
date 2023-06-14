@@ -25,6 +25,15 @@ int luces::changeState2()
     }
     
 }
+
+void luces::setState(int n)
+{
+    if (n >= 0 && n <= 3)
+    {
+        estado = n;
+    }
+}
+
 int luces::getState()
 {
     return estado;
@@ -32,13 +41,8 @@ int luces::getState()
 
 
 void luces::imprimir()
-{
-    if (estado)
-    {
-        /* code */
-    }
-    
-    else if (estado == 0)
+{   
+    if (estado == 0)
     {
         cout << "Luces: apagadas" << endl;
     }
@@ -52,7 +56,7 @@ void luces::imprimir()
     }
     else if (estado == 3)
     {
-        cout << "Luces: Niebla" << endl;
+        cout << "Luces: Niebla <MAXIMO>" << endl;
     }
 
     
