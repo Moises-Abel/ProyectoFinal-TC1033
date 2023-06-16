@@ -21,14 +21,17 @@ void gasolina::gasto(double n)
 
 void gasolina::setGasolina(double n)
 {
-    if (n <= 42 && nivelGasolina != 42)
+    if (nivelGasolina != 42)
     {
         nivelGasolina = nivelGasolina + n;
         if (nivelGasolina > 42)
         {
             nivelGasolina = 42;
         }
-        
+        if (n >= 42)
+        {
+            nivelGasolina = 42;
+        }
     }
 }
 
@@ -48,11 +51,11 @@ void gasolina::imprimir()
     {
         cout << "Tanque: " << porcentajeGasolina << "%" << endl;
     }
-    if(porcentajeGasolina < 15)
+    else if(porcentajeGasolina < 15 && porcentajeGasolina > 0)
     {
-        cout << "Tanque: " << porcentajeGasolina << "%" << "Combustible bajo" << endl;
+        cout << "Tanque: " << porcentajeGasolina << "%" << " Combustible bajo" << endl;
     }
-    if (porcentajeGasolina <= 0)
+    else if (porcentajeGasolina <= 0)
     {
         cout << "Tanque: Tanque vacio" << endl;        
     }
