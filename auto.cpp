@@ -84,7 +84,7 @@ void automovil::imprimirV()
     {
         cout << "velocidad: "<< velocidad << " Km/h" << endl;
     }
-    else if (velocidad > 160)
+    else if (velocidad > 160 && velocidad < 230)
     {
         cout <<"velocidad: "<< velocidad <<" Km/h <ADVERTENCIA DE VELOCIDAD>" << endl;
     }
