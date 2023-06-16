@@ -23,11 +23,11 @@ void llanta::imprimir()
     {
        cout << "Presion de la llanta: " << presion << " PSI" << endl;
     }
-    if (presion < 32)
+    if (presion <= 32)
     {
        cout << "Presion de la llanta: " << presion << " PSI" << " <ALERTA>  presion baja" << endl;
     }
-    if (presion > 48)
+    if (presion >= 48)
     {
        cout << "Presion de la llanta: " << presion << " PSI" << " <ALERTA>  presion alta" << endl;
     }
